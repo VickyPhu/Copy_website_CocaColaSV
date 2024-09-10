@@ -392,7 +392,7 @@ button i {
     width: 190px;
 }
 
-/* zoomar in vid hiver */
+/* zoomar in vid hover */
 .buttons_grid a:hover {
     transform: scale(1.08);
 }
@@ -429,7 +429,6 @@ footer {
     background-color: #000;
     color: #fff;
 }
-
 
 .footer_top {
     display: flex;
@@ -513,10 +512,18 @@ footer {
 .footer_sns button {
     border-radius: 20px;
     width: 30px;
+    padding: 1px;
     border: 2px solid #fff;
     background-color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.fa-brands.fa-facebook-f {
+.fa-brands.fa-facebook-f, .fa-brands.fa-instagram, .fa-brands.fa-x-twitter{
     color: #fff;
+    padding-right: 8px;
+}
+
+.footer_sns button:hover {
+    background-color: #363636;
 }
