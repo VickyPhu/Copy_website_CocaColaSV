@@ -1,0 +1,522 @@
+/* Nollställer sidan */
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font: 16px/1.5 'Noto Sans' ,sans-serif !important;
+    background-color: #eeeeee !important;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+    font-weight: 700 !important;
+    letter-spacing: 0.8px;
+    font-size: 34px !important;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 350;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+/* Meny */
+
+/* Navbar container */
+.top_navbar {
+    overflow: hidden;
+    background-color: #fff;
+    height: 80px;
+  }
+  
+.navbar_logo {
+    margin-left: 60px;
+}
+
+/* Länkarna i menyn */
+.top_navbar a {
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    color: #000;
+    padding: 30px;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+}
+
+/* Svart linje på botten av menyn vid hover */ /* Fungerar ej */
+.top_navbar a:hover {
+    border-bottom: 2px solid #000;
+}
+
+/* Dropdown container */
+.drop_down {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.drop_down .drop_btn {
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 35px;
+    background-color: inherit;
+    font-family: inherit;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+}
+
+/* för att endast ändra pilarna på top menyn */
+button i {
+    padding-left: 8px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+  
+/* Dropdown content, ska vara gömd endast synlig vid hover */
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    padding: 60px 0px 35px 5px;
+    z-index: 1;
+}
+  
+/* Länkarna i dropdown menyn */
+.dropdown_content a {
+    float: none;
+    color: black;
+    padding: 0px 0px 8px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+/* Hover för dropdown meny ska vara bold text */
+.dropdown_content a:hover {
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.drop_down:hover .drop_btn {
+    text-decoration: bold;
+}
+
+/* Pil uppstår vid hover i dropdown menyn */
+.add_arrow i {
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 12px;
+    transform: translateX(-10px);
+}
+
+.add_arrow:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* När pil uppstår så ska dropdown boxen vara i samma ursprungliga storlek */
+.add_arrow:hover {
+    width: 200px;
+}
+  
+/* Show the dropdown menu on hover */
+.drop_down:hover .dropdown_content {
+    display: block;
+}
+
+/* Carousel */
+
+#carousel {
+    margin: 0 auto; /* centrerar carouselen */
+    max-width: 90%; /* max bredd för karusellen */
+    margin-top: 30px;
+    height: 700px; /* Högre än height för innehållet så slide knapparna hamnar under innehållet */
+}
+
+/* runda kanter på innehållet i carousel */
+#carousel img {
+    border-radius: 20px;
+}
+
+#carousel iframe {
+    border-radius: 20px;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center; /*centrerar innehållet horisontellt */
+    align-items: center; /* centrerar innehållet vertikalt */
+    height: 600px; /* Sätter en fast höjd för innehållet */
+}
+
+.carousel-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* döljer delar av innehållet som ej passar */
+    position: relative;
+}
+
+/* Bilderna fyller karusellens ramar */
+.carousel-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* så hela innehållet får plats inom ramen för karusellen */
+}
+
+/* Videon fyller karusellens ramar */
+.carousel-image-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* så hela innehållet får plats inom ramen för karusellen */
+}
+
+.carousel-indicators button {
+    background-color: #000 !important;
+}
+
+.carousel-caption {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Card */
+
+.card_holder {
+    display: flex;
+    justify-content: center;
+}
+
+/* Toppen på bilderna är runda */
+.card_inner img {
+    width: 540px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card_inner {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 540px;
+    height: 700px;
+    margin: 30px 10px 0px 20px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.card_inner h3 {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.8px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.card_inner p {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* endast läs mer texten */
+.lasmer {
+    font-weight: 600;
+}
+
+.fa-solid.fa-arrow-right-long {
+    padding-left: 10px;
+    opacity: 0.7;
+}
+
+/* section med cards */
+
+.section_cards {
+    margin-top: 100px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.box_inner {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 540px;
+    height: 600px;
+}
+
+.box img {
+    width: 580px;
+    height: 580px;
+    padding-top: 75px;
+    border-radius: 15px;
+}
+
+.box_inner h3 {
+    padding: 60px 60px 10px 60px;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 0.8px;
+}
+
+.box_inner p {
+    padding-left: 60px;
+    padding-right: 80px;
+}
+
+.box_inner button {
+    display: inline-block;
+    width: 60%;
+    padding: 7px 5px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+/* ta bort standard länk stil */
+.box_inner button a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Grå färg vid hover över knappen */
+.box_inner button:hover {
+    background-color: #d4d4d4;
+}
+
+.box_inner2 {
+    background-color: #fff;
+    width: 540px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.box_inner2 h3 {
+    padding: 60px 60px 10px 60px;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 0.8px;
+}
+
+.box_inner2 p {
+    padding-left: 60px;
+    padding-right: 70px;
+}
+
+.box_inner2 button {
+    display: inline-block;
+    width: 60%;
+    padding: 7px 5px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 125px;
+}
+
+.box_inner2 button a {
+    text-decoration: none;
+    color: #000;
+}
+
+.box_inner2 button:hover {
+    background-color: #d4d4d4;
+}
+
+/* De 6 knapparna med logotyper */
+
+.buttons_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons_grid a {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #dfdfdf;
+}
+
+/* Bilderna i grid boxarna ska vara mindre än boxen */
+.buttons_grid a img {
+    width: 190px;
+}
+
+/* zoomar in vid hiver */
+.buttons_grid a:hover {
+    transform: scale(1.08);
+}
+
+/* Knappen under utforska våra varumärken */
+.button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Knappens utseende */
+.button_container button {
+    border-radius: 20px;
+    border: 2.5px solid #000;
+    width: 22%;
+    padding: 5px 7px;
+    margin-bottom: 100px;
+}
+
+/* Länken i knappen */
+.button_container button a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.footer_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px 40px 100px;
+    position: relative;
+}
+/* Position relative och absolute för att skapa ett block */
+/* after används för att skapa Border bottom centrerad och avskuren på sidorna utan att påverka items i footer_top */
+.footer_top::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 78%;
+    left: 11%;
+    border-bottom: 1px solid #fff;
+}
+
+.footer_top img {
+    width: 320px;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+
+.footer_top button {
+    border-radius: 20px;
+    width: 12%;
+    padding: 5px 7px;
+    border: 2px solid #fff;
+    background-color: #000;
+    margin-right: 55px;
+}
+
+.footer_top button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.fa-solid.fa-location-dot {
+    padding-right: 10px;
+}
+
+.footer_middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 150px 40px 155px;
+}
+
+.footer_nav {
+    display: flex;
+    gap: 100px; /* Mellanrum mellan navigationsboxarna */
+}
+
+.footer_nav nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_nav nav ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Första ordet i listan */
+.footer_nav nav ul li:first-child {
+    font-size: 10px;
+    color: #d4d4d4;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.footer_sns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 120px;
+}
+
+.footer_sns button {
+    border-radius: 20px;
+    width: 30px;
+    border: 2px solid #fff;
+    background-color: #000;
+}
+
+.fa-brands.fa-facebook-f {
+    color: #fff;
+}
