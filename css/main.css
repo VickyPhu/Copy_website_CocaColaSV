@@ -491,7 +491,7 @@ footer {
 
 .footer_nav {
     display: flex;
-    gap: 110px; /* Mellanrum mellan navigationsboxarna */
+    gap: 80px; /* Mellanrum mellan navigationsboxarna */
 }
 
 .footer_nav nav ul {
@@ -515,6 +515,11 @@ footer {
     letter-spacing: 0.2px;
 }
 
+.footer_nav nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .footer_sns {
     display: flex;
     gap: 20px;
@@ -523,8 +528,8 @@ footer {
 
 .footer_sns button {
     border-radius: 20px;
-    width: 30px;
-    padding: 1px;
+    width: 35px;
+    padding: 3px;
     border: 2px solid #fff;
     background-color: #000;
     cursor: pointer;
@@ -533,7 +538,8 @@ footer {
 
 .fa-brands.fa-facebook-f, .fa-brands.fa-instagram, .fa-brands.fa-x-twitter{
     color: #fff;
-    padding-right: 8px;
+    padding-right: 10px;
+    font-size: 16px;
 }
 
 .footer_sns button:hover {
