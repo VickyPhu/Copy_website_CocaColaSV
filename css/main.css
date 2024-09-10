@@ -144,7 +144,7 @@ button i {
     display: block;
 }
 
-/* Carousel */
+/* CAROUSEL */
 
 #carousel {
     margin: 0 auto; /* centrerar carouselen */
@@ -491,7 +491,7 @@ footer {
 
 .footer_nav {
     display: flex;
-    gap: 100px; /* Mellanrum mellan navigationsboxarna */
+    gap: 110px; /* Mellanrum mellan navigationsboxarna */
 }
 
 .footer_nav nav ul {
@@ -503,14 +503,16 @@ footer {
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: 600;
+    letter-spacing: 0.2px;
 }
 
 /* Första ordet i listan */
 .footer_nav nav ul li:first-child {
-    font-size: 10px;
+    font-size: 11px;
     color: #d4d4d4;
     padding: 10px 0px;
     font-weight: bold;
+    letter-spacing: 0.2px;
 }
 
 .footer_sns {
@@ -536,4 +538,16 @@ footer {
 
 .footer_sns button:hover {
     background-color: #363636;
+}
+
+.footer_container p {
+    padding: 50px 150px 100px 0px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+}
+
+.fa-regular.fa-copyright {
+    padding-right: 5px;
 }
