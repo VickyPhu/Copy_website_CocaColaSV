@@ -477,6 +477,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 40px 150px 40px 155px;
+    position: relative;
+}
+
+.footer_middle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 78%;
+    left: 11%;
+    border-bottom: 1px solid #fff;
 }
 
 .footer_nav {
