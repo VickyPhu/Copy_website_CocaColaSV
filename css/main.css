@@ -23,12 +23,6 @@ p {
     font-weight: 350;
 }
 
-.container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
-}
-
 /* MENY */
 
 /* Navbar container */
@@ -139,7 +133,7 @@ button i {
     width: 200px;
 }
   
-/* Show the dropdown menu on hover */
+/* Dropdown menyn visas vid hover */
 .drop_down:hover .dropdown_content {
     display: block;
 }
@@ -150,7 +144,7 @@ button i {
     margin: 0 auto; /* centrerar carouselen */
     max-width: 90%; /* max bredd för karusellen */
     margin-top: 30px;
-    height: 700px; /* Högre än height för innehållet så slide knapparna hamnar under innehållet */
+    height: 700px; /* Högre än innehållets height så slide knapparna hamnar under innehållet */
 }
 
 /* runda kanter på innehållet i carousel */
@@ -206,6 +200,9 @@ button i {
 
 .carousel-indicators button {
     background-color: #000 !important;
+    width: 15px !important; /* Ändra storlek på slide indicators */
+    height: 15px !important;
+    border-radius: 50%;
 }
 
 /* VARJE BILD I KARUSELLEN */
@@ -303,22 +300,14 @@ button i {
     font-weight: 600;
 }
 
-#slide4_caption h2 {
+#slide4_caption h2, #slide5_caption h2 {
     padding-bottom: 200px;
     padding-right: 350px;
     text-align: left;
     letter-spacing: 0.8px;
 }
 
-#slide5_caption h2 {
-    padding-bottom: 200px;
-    padding-right: 380px;
-    text-align: left;
-    letter-spacing: 0.8px;
-}
-
 .carousel-caption a {
-    display: inline-block;
     padding: 5px 100px;
     background-color: #ffffff;
     color: #000000;
@@ -681,3 +670,5 @@ footer {
     padding-right: 5px;
     font-size: 10px;
 }
+
+
