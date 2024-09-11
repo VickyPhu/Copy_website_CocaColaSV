@@ -232,11 +232,6 @@ button i {
     font-weight: 600;
 }
 
-.carousel-item.active button:hover {
-    background-color: #eeeeee;
-    color: #fff;
-}
-
 .carousel-caption {
     position: absolute;
     color: #fff;
@@ -273,11 +268,11 @@ button i {
 #slide2_caption {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     margin-right:  200px;
 }
 
-#slide2_caption button {
+#slide2_caption a {
     font-weight: 600;
 }
 
@@ -322,6 +317,25 @@ button i {
     letter-spacing: 0.8px;
 }
 
+.carousel-caption a {
+    display: inline-block;
+    padding: 5px 100px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 200px;
+}
+
+.carousel-caption a:hover {
+    background-color: #eeeeee;
+    color: #fff;
+}
 
 /* CARDS */
 
@@ -411,12 +425,15 @@ button i {
     padding-right: 80px;
 }
 
-.box_inner button {
+.box_inner a {
     display: inline-block;
     width: 60%;
-    padding: 7px 5px;
+    padding: 7px 0px;
     background-color: #fff;
+    border: 2px solid #000;
     text-align: center;
+    text-decoration: none;
+    color: #000;
     cursor: pointer;
     border-radius: 20px;
     font-weight: 600;
@@ -425,14 +442,8 @@ button i {
     margin-top: 20px;
 }
 
-/* ta bort standard länk stil */
-.box_inner button a {
-    text-decoration: none;
-    color: #000;
-}
-
 /* Grå färg vid hover över knappen */
-.box_inner button:hover {
+.box_inner a:hover {
     background-color: #d4d4d4;
 }
 
@@ -456,25 +467,24 @@ button i {
     padding-right: 70px;
 }
 
-.box_inner2 button {
+.box_inner2 a {
     display: inline-block;
     width: 60%;
     padding: 7px 5px;
     background-color: #fff;
+    border: 2px solid #000;
+    text-decoration: none;
+    color: #000;
     cursor: pointer;
     border-radius: 20px;
     font-weight: 600;
     font-size: 15px;
+    text-align: center;
     margin-left: 60px;
     margin-top: 125px;
 }
 
-.box_inner2 button a {
-    text-decoration: none;
-    color: #000;
-}
-
-.box_inner2 button:hover {
+.box_inner2 a:hover {
     background-color: #d4d4d4;
 }
 
@@ -515,26 +525,25 @@ button i {
 .button_container {
     display: flex;
     justify-content: center;
+}
+
+.button_container a {
     margin-top: 30px;
-}
-
-/* Knappens utseende */
-.button_container button {
-    border-radius: 20px;
-    border: 2.5px solid #000;
-    width: 22%;
-    padding: 5px 7px;
     margin-bottom: 100px;
-}
-
-/* Länken i knappen */
-.button_container button a {
+    padding: 7px 100px;
+    border: 2px solid #000;
     text-decoration: none;
     color: #000;
-    font-weight: 700;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.button_container a:hover {
+    background-color: #d4d4d4;
 }
 
 /* Footer */
@@ -564,22 +573,21 @@ footer {
 
 .footer_top img {
     width: 320px;
-    padding-left: 55px;
+    padding-left: 60px;
     padding-top: 20px;
 }
 
-.footer_top button {
+.footer_top a {
     border-radius: 20px;
     width: 12%;
     padding: 5px 7px;
     border: 2px solid #fff;
     background-color: #000;
     margin-right: 55px;
-}
-
-.footer_top button a {
     text-decoration: none;
     color: #fff;
+    text-align: center;
+    font-weight: 300;
 }
 
 .fa-solid.fa-location-dot {
@@ -590,7 +598,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 150px 40px 155px;
+    padding: 40px 150px 40px 160px;
     position: relative;
 }
 
@@ -605,7 +613,7 @@ footer {
 
 .footer_nav {
     display: flex;
-    gap: 80px; /* Mellanrum mellan navigationsboxarna */
+    gap: 110px; /* Mellanrum mellan navigationsboxarna */
 }
 
 .footer_nav nav ul {
@@ -636,24 +644,25 @@ footer {
 
 .footer_sns {
     display: flex;
-    gap: 20px;
+    gap: 5px;
     margin-bottom: 120px;
 }
 
-.footer_sns button {
+.footer_sns a {
     border-radius: 20px;
-    width: 35px;
-    padding: 3px;
+    width: 30px;
+    padding: 1px;
     border: 2px solid #fff;
     background-color: #000;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
 }
 
 .fa-brands.fa-facebook-f, .fa-brands.fa-instagram, .fa-brands.fa-x-twitter{
     color: #fff;
-    padding-right: 10px;
-    font-size: 16px;
+    padding-left: 6px;
+    font-size: 14px;
 }
 
 .footer_sns button:hover {
@@ -670,4 +679,5 @@ footer {
 
 .fa-regular.fa-copyright {
     padding-right: 5px;
+    font-size: 10px;
 }

@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=2560 × 1600, initial-scale=1">
         <meta name="description" content="Coca-Cola Company products">
-        <meta author="" content="">
         <link href="css/main.css" rel="stylesheet">
         <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -25,27 +24,23 @@
                 <a href="#">Varumärken</a>
                 <!--Dropdown meny vid hover -->
                 <div class="drop_down">
-                    <button class="drop_btn">Upptäck
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                    <div class="dropdown_content">
-                      <a class="add_arrow" href="#">Coke-appen<i class="fa-solid fa-chevron-right"></i></a>
-                      <a class="add_arrow" href="#">Fanta Halloween<i class="fa-solid fa-chevron-right"></i></a>
-                      <a class="add_arrow" href="#">Magiska taco-priser<i class="fa-solid fa-chevron-right"></i></a>
-                      <a class="add_arrow" href="#">Magiska måltider<i class="fa-solid fa-chevron-right"></i></a>
-                      <a class="add_arrow" href="#">Always on<i class="fa-solid fa-chevron-right"></i></a>
+                    <button class="drop_btn" aria-label="öppna rullgardinsmenyn">Upptäck<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button> <!-- aria-hidden="true" så att skärmläsare inte läser upp ikonen då aria-label="öppna rullgardinsmenyn" redan förklarar interaktionen -->
+                    <div class="dropdown_content"> <!-- aria-hidden="true" så skärmläsare inte läser upp ikonen eftersom den är dekorativ-->
+                      <a class="add_arrow" href="#">Coke-appen<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                      <a class="add_arrow" href="#">Fanta Halloween<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                      <a class="add_arrow" href="#">Magiska taco-priser<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                      <a class="add_arrow" href="#">Magiska måltider<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                      <a class="add_arrow" href="#">Always on<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                   </div>
                 <!--Dropdown meny vid hover -->
                 <div class="drop_down">
-                  <button class="drop_btn">Påverkan
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </button>
-                  <div class="dropdown_content">
-                    <a class="add_arrow" href="#">Hållbarhet<i class="fa-solid fa-chevron-right"></i></a>
-                    <a class="add_arrow" href="#">Socialt engagemang<i class="fa-solid fa-chevron-right"></i></a>
-                    <a class="add_arrow" href="#">This Is Happening<i class="fa-solid fa-chevron-right"></i></a>
-                    <a class="add_arrow" href="#">100 Voices<i class="fa-solid fa-chevron-right"></i></a>
+                  <button class="drop_btn" aria-label="öppna rullgardinsmenyn">Påverkan<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+                  <div class="dropdown_content"> <!-- aria-hidden="true" så skärmläsare inte läser upp ikonen eftersom den är dekorativ-->
+                    <a class="add_arrow" href="#">Hållbarhet<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="add_arrow" href="#">Socialt engagemang<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="add_arrow" href="#">This Is Happening<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="add_arrow" href="#">100 Voices<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
                   </div>
                 </div>
             </nav>
@@ -63,7 +58,7 @@
                             <div class="carousel-caption">
                                 <h1>Fanta Halloween</h1>
                                 <p>Vinn Beetlejuice Beetlejuice biobiljetter</p>
-                                <button type="button" class="btn btn-light">Läs mer</button>
+                                <a href="#">Läs mer</a>
                             </div>
                         </div>
                         <!--Andra bilden i karusellen med knapp-->
@@ -72,22 +67,22 @@
                                 <img src="images/win_magical_taco_prices.webp" alt="Bild på en flaska Coca-Cola Zero med Tacos och tillhörande text: Vinn magiska Taco-priser">
                             </div>
                             <div class="carousel-caption" id="slide2_caption">
-                                <button type="button" class="btn btn-light"><a>Läs mer</a></button>
+                                <a href="#">Läs mer</a>
                             </div>
                         </div>
                         <!--Tredje bilden i karusellen med tillhörande text & knapp-->
                         <div class="carousel-item">
                             <div class="carousel-image-wrapper3">
-                                <img src="images/magical_meals.webp" alt="Bild på en måltid av spaghetti bolognesse och Coca-Cola Zero">>
+                                <img src="images/magical_meals.webp" alt="Bild på en måltid av spaghetti bolognesse och två Coca-Cola Zero">
                             </div>
                             <div class="carousel-caption" id="slide3_caption">
                                 <h2>Magiska måltider</h2>
                                 <p>Chans att vinna exklusiva priser</p>
-                                <button type="button"><a>Läs mer</a></button>
+                                <a href="#">Läs mer</a>
                             </div>
                         </div>
                         <!--Fjärde bilden i karusellen med text-->
-                        <div class="carousel-item" class="filter4">
+                        <div class="carousel-item">
                             <div class="carousel-image-wrapper4">
                                 <img src="images/cocacola-app-redbg.webp" alt="Coca-Cola appen">>
                             </div>
@@ -98,7 +93,7 @@
                         <!--Femte bilden i karusellen med text-->
                         <div class="carousel-item">
                             <div class="carousel-image-wrapper5">
-                                <img src="images/stuck_cork.webp" alt="Bonaqua, Fanta, Coca-Cola Zero och sprite flaska med fastsittande korkar">>
+                                <img src="images/stuck_cork.webp" alt="Bonaqua, Fanta, Coca-Cola Zero och sprite flaska med fastsittande korkar">
                             </div>
                             <div class="carousel-caption" id="slide5_caption">
                                 <h2>Nu lanserar Coca-Cola i Sverige nya fastsittande korkar</h2>
@@ -131,14 +126,14 @@
                         <img src="images/cocacola_app_whitebg.webp" alt="Coca-Cola appen">
                         <h3>Vill du vinna grymma priser?</h3>
                         <p>Ladda ner Coca-Cola appen för chansen att vinna grymma priser. Ange kod under kork eller spela våra spel för att samla valutor i appen. Så enkelt är det!</p>
-                        <p class="lasmer">Läs mer<i class="fa-solid fa-arrow-right-long" alt="Pil som pekar åt höger"></i></p>
+                        <p class="lasmer">Läs mer<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></p>
                     </a>    
                     <!--andra card-->
                     <a href="#" class="card_inner">
                         <img src="images/cocacola_cork.webp" alt="Röd Coca-Cola kork">
                         <h3>Always On tävlingar</h3>
                         <p>Vi samarbetar med Filmstaden för att ge dig fina filmupplevelser under 2024. Njut av Coca-Cola och delta i våra tävlingar</p>
-                        <p class="lasmer">Läs mer<i class="fa-solid fa-arrow-right-long" alt="Pil som pekar åt höger"></i></p>
+                        <p class="lasmer">Läs mer<i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></p>
                     </a>    
                 </div>    
             </section>
@@ -150,7 +145,7 @@
                     <div class="box_inner">
                         <h3>Vi bryr oss om vår planet, människorna som bor där och de samhällen där vi är verksamma</h3>
                         <p>Vi strävar efter att skapa en mer hållbar och bättre framtid för oss alla. Att göra skillnad i människors liv, i samhällen och för vår planet genom att göra affärer på rätt sätt. Genom att bli ett bättre företag kan vi hjälpa till att bygga en mer stabil och mer hållbar framtid för oss alla.</p>
-                        <button><a href="#">Läs mer</a></button>
+                        <a href="#">Läs mer</a>
                     </div>
                     <img src="images/clouds.webp" alt="Över land täckt med moln">
                 </div>
@@ -160,7 +155,7 @@
                     <div class="box_inner2">      
                         <h3>Människor är viktiga</h3>
                         <p>Vi tror att en mångfaldig, rättvis och inkluderande arbetsplats gör oss starkare som företag, gör det möjligt för oss att skapa en bättre gemensam framtid för medarbetarna och samhällen, öppnar upp för lika möjligheter och bygger samhörighet på våra arbetsplatser och i samhället.</p>
-                        <button><a href="#">Läs mer</a></button>
+                        <a href="#">Läs mer</a>
                     </div>    
                 </div>
             </section>
@@ -176,7 +171,7 @@
                     <a href="#"><img src="images/powerade.webp" alt="Powerade logotyp"></a>
                 </div>
                 <div class="button_container">
-                    <button><a href="#">Alla varumärken</a></button>
+                    <a href="#">Alla varumärken</a>
                 </div>
             </section>
         </main>
@@ -184,7 +179,7 @@
             <div class="footer_container">
                 <div class="footer_top">
                     <img src="images/cocacola_whitelogotype.webp" alt="Coca-Cola logotyp">
-                    <button><a href=""><i class="fa-solid fa-location-dot"></i>Sweden</a></button>
+                    <a href="#" aria-label="Klicka för att välja destination"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Sweden</a>
                 </div>
                 <div class="footer_middle">
                     <div class="footer_nav">
@@ -201,26 +196,26 @@
                             <ul>
                                 <li>BEHÖVER DU HJÄLP?</li>
                                 <li><a href="#">Webbplatskarta</a></li>
-                                <li><a href="contact.html">Kontakta oss<a href="#"></li>
+                                <li><a href="contact.html">Kontakta oss</a></li>
                             </ul>
                         </nav>
                         <nav>
                             <ul>
                                 <li>JURIDIK</li>
-                                <li><a href="">Användarvillkor</a></li>
-                                <li><a href="">Sekretesspolicy</a></li>
-                                <li><a href="">Cookie-inställningar</a></li>
-                                <li><a href="">Cookiepolicy</a></li>
+                                <li><a href="#">Användarvillkor</a></li>
+                                <li><a href="#">Sekretesspolicy</a></li>
+                                <li><a href="#">Cookie-inställningar</a></li>
+                                <li><a href="#">Cookiepolicy</a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="footer_sns">    
-                        <button><a href="#"><i class="fa-brands fa-facebook-f" alt="Facebook logotyp"></i></a></button>
-                        <button><a href="#"><i class="fa-brands fa-instagram" alt="Instagram logotyp"></i></a></button>
-                        <button><a href="#"><i class="fa-brands fa-x-twitter" alt="X gamla Twitter logotyp"></i></a></button>
+                    <div class="footer_sns">    <!-- aria-label för att tydligt förklara länkens kontext-->
+                        <a href="#" aria-label="Följ oss på Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Följ oss på Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Följ oss på Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
                     </div>     
                 </div>
-                <p><i class="fa-regular fa-copyright" alt="Copyright"></i>2024 The Coca-Cola Company. Alla rättigheter förbehålls.</p>    
+                <p><i class="fa-regular fa-copyright" aria-hidden="true"></i>2024 The Coca-Cola Company. Alla rättigheter förbehålls.</p>    
             </div>         
         </footer>
     </body>
