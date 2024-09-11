@@ -6,7 +6,7 @@
 }
 
 body{
-    font: 16px/1.5 'Noto Sans' ,sans-serif !important;
+    font: 16px/1.5 "Noto Sans" ,sans-serif !important;
     background-color: #eeeeee !important;
 }
 
@@ -29,7 +29,7 @@ p {
     overflow:hidden;
 }
 
-/* Meny */
+/* MENY */
 
 /* Navbar container */
 .top_navbar {
@@ -94,7 +94,7 @@ button i {
     background-color: #fff;
     min-width: 200px;
     padding: 60px 0px 35px 5px;
-    z-index: 1;
+    z-index: 3; /* Högre z-index så att filtret från karusellen ej täcker */
 }
   
 /* Länkarna i dropdown menyn */
@@ -181,18 +181,20 @@ button i {
     height: auto;
 }
 
-.carousel-image-wrapper {
+.carousel-image-wrapper, .carousel-image-wrapper1, .carousel-image-wrapper2, .carousel-image-wrapper3, .carousel-image-wrapper4, .carousel-image-wrapper5 {
     width: 100%;
     height: 100%;
     overflow: hidden; /* döljer delar av innehållet som ej passar */
     position: relative;
+    display: inline-block
 }
 
 /* Bilderna fyller karusellens ramar */
-.carousel-image-wrapper img {
+.carousel-image-wrapper, .carousel-image-wrapper1 img, .carousel-image-wrapper2 img, .carousel-image-wrapper3 img, .carousel-image-wrapper4 img, .carousel-image-wrapper5 img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* så hela innehållet får plats inom ramen för karusellen */
+    display: block;
 }
 
 /* Videon fyller karusellens ramar */
@@ -206,12 +208,122 @@ button i {
     background-color: #000 !important;
 }
 
-.carousel-caption {
-    padding: 10px;
-    border-radius: 5px;
+/* VARJE BILD I KARUSELLEN */
+
+/* Första bilden */
+.carousel-item.active h1 {
+    display: flex;
+    font-weight: 700;
+    letter-spacing: 0.8px;
 }
 
-/* Card */
+.carousel-item.active p {
+    display: flex;
+    letter-spacing: 0.2px;
+}
+
+.carousel-item.active button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 180px;
+    padding: 5px 7px;
+    width: 30%;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.carousel-item.active button:hover {
+    background-color: #eeeeee;
+    color: #fff;
+}
+
+.carousel-caption {
+    position: absolute;
+    color: #fff;
+    z-index: 2; /* Så texten inte hamnar bakom det mörkare filtret */
+}
+
+.carousel-image-wrapper1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.carousel-image-wrapper2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+    pointer-events: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#slide2_caption {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    margin-right:  200px;
+}
+
+#slide2_caption button {
+    font-weight: 600;
+}
+
+.carousel-image-wrapper3::before, .carousel-image-wrapper4::before, .carousel-image-wrapper5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+    pointer-events: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#slide3_caption h2 {
+    display: flex;
+    padding-bottom: 10px;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+}
+
+#slide3_caption button {
+    border-color: #fff;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+#slide4_caption h2 {
+    padding-bottom: 200px;
+    padding-right: 350px;
+    text-align: left;
+    letter-spacing: 0.8px;
+}
+
+#slide5_caption h2 {
+    padding-bottom: 200px;
+    padding-right: 380px;
+    text-align: left;
+    letter-spacing: 0.8px;
+}
+
+
+/* CARDS */
 
 .card_holder {
     display: flex;
