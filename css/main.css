@@ -389,6 +389,7 @@ button i {
     border-radius: 15px;
     width: 540px;
     height: 600px;
+    box-shadow: 0 10px 30px #dfdfdf;
 }
 
 .box img {
@@ -440,6 +441,7 @@ button i {
     width: 540px;
     height: 550px;
     border-radius: 15px;
+    box-shadow: 0 10px 30px #dfdfdf;
 }
 
 .box_inner2 h3 {
