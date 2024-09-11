@@ -4,6 +4,7 @@
     margin:0;
     box-sizing: border-box;
 }
+/* Kört !important eftersom bootstrap kört över på vissa ställen */
 
 body{
     font: 16px/1.5 "Noto Sans" ,sans-serif;
@@ -156,6 +157,8 @@ button i {
     border-radius: 20px;
 }
 
+/* Innehållets storlek och positionering i karusellen */
+
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -205,6 +208,12 @@ button i {
     border-radius: 50%;
 }
 
+.carousel-caption {
+    position: absolute;
+    color: #fff;
+    z-index: 2; /* Så texten inte hamnar bakom det mörkare filtret */
+}
+
 /* VARJE BILD I KARUSELLEN */
 
 /* Första bilden */
@@ -228,12 +237,6 @@ button i {
     width: 30%;
     border-radius: 20px;
     font-weight: 600;
-}
-
-.carousel-caption {
-    position: absolute;
-    color: #fff;
-    z-index: 2; /* Så texten inte hamnar bakom det mörkare filtret */
 }
 
 .carousel-image-wrapper1::before {
@@ -293,6 +296,11 @@ button i {
     padding-bottom: 10px;
     letter-spacing: 0.8px;
     font-weight: 700;
+}
+
+#slide3_caption p {
+    display: flex;
+    letter-spacing: 0.5px;
 }
 
 #slide3_caption button {
@@ -382,6 +390,8 @@ button i {
     margin-top: 100px;
 }
 
+/* Första boxen */
+
 .box {
     display: flex;
     justify-content: center;
@@ -437,6 +447,8 @@ button i {
     background-color: #d4d4d4;
 }
 
+/* Andra boxen */
+
 .box_inner2 {
     background-color: #fff;
     width: 540px;
@@ -476,6 +488,12 @@ button i {
 
 .box_inner2 a:hover {
     background-color: #d4d4d4;
+}
+
+/* Lazy loading */
+
+.images {
+    object-fit: cover;
 }
 
 /* De 6 knapparna med logotyper */
@@ -584,6 +602,8 @@ footer {
     padding-right: 10px;
 }
 
+/* Footer mitten sektion */
+
 .footer_middle {
     display: flex;
     justify-content: space-between;
@@ -592,6 +612,7 @@ footer {
     position: relative;
 }
 
+/* Border Bottom ska ej påverka övriga element */
 .footer_middle::after {
     content: '';
     position: absolute;
